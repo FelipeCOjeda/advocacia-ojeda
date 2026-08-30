@@ -348,11 +348,54 @@
     .sobre { background: var(--paper); }
     .sobre-grid {
       display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      gap: 5rem;
+      grid-template-columns: 270px 1fr;
+      gap: 4.5rem;
       margin-top: 3.5rem;
       align-items: start;
     }
+    /* Bio portrait column */
+    .bio-col { display: flex; flex-direction: column; gap: 1rem; }
+    .bio-photo-wrap { position: relative; overflow: hidden; border-radius: 10px; }
+    .bio-photo {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      border-radius: 10px;
+    }
+    .bio-photo-fallback {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      border-radius: 10px;
+      background: var(--accent-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: -0.02em;
+    }
+    .bio-caption {
+      text-align: center;
+      padding: 0.75rem 0.5rem 0.25rem;
+    }
+    .bio-caption strong {
+      display: block;
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+    .bio-caption span {
+      font-size: 0.8125rem;
+      color: var(--ink-2);
+    }
+    /* Bio content column */
+    .bio-content { display: flex; flex-direction: column; gap: 2rem; }
     .sobre-copy p {
       font-size: 1.0625rem;
       color: var(--ink-2);
@@ -681,7 +724,10 @@
         padding-left: 1.5rem;
         padding-right: 1.5rem;
       }
-      .sobre-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .sobre-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .bio-col { flex-direction: row; align-items: center; gap: 1.5rem; }
+      .bio-photo-wrap { width: 120px; flex-shrink: 0; }
+      .bio-caption { text-align: left; }
       .destaque-inner { grid-template-columns: 1fr; gap: 2.5rem; }
       .destaque-badge { min-width: 0; width: 100%; }
       .contato-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -757,27 +803,45 @@
       <p class="eyebrow">Sobre o Escritório</p>
       <h2 class="h2">Advocacia personalizada,<br>expertise contemporânea</h2>
       <div class="sobre-grid">
-        <div class="sobre-copy">
-          <p>A Advocacia Ojeda foi fundada em 2014 com o propósito de oferecer assessoria jurídica de excelência para clientes que operam em ambientes de alta complexidade — onde o direito precisa acompanhar a velocidade dos negócios.</p>
-          <p>Felipe Ojeda combina formação clássica em Direito com especializações em áreas contemporâneas como Direito Digital, Tributário e Empresarial. Essa combinação permite uma atuação estratégica e preventiva, reduzindo litígios e protegendo o patrimônio dos clientes a longo prazo.</p>
-          <p>O escritório opera com infraestrutura moderna, processos ágeis e comunicação transparente — para que o cliente entenda cada etapa e possa tomar decisões com segurança.</p>
-        </div>
-        <div class="sobre-aside">
-          <div class="card">
-            <p class="card-label">Felipe Cavalheiro Ojeda</p>
-            <p>Advogado fundador. OAB/SP 357.192. Formado pela Universidade São Judas Tadeu, com pós-graduações em Direito Tributário, Empresarial e Gestão Jurídica de Comércio Internacional.</p>
+
+        <!-- Coluna: foto -->
+        <div class="bio-col">
+          <div class="bio-photo-wrap">
+            <img
+              src="foto.jpg"
+              alt="Felipe Cavalheiro Ojeda — Advogado, OAB/SP 357.192"
+              class="bio-photo"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+            >
+            <div class="bio-photo-fallback" style="display:none" aria-hidden="true">FO</div>
           </div>
-          <div class="card">
-            <p class="card-label">Formação &amp; Especializações</p>
-            <ul>
-              <li>Direito — Universidade São Judas Tadeu</li>
-              <li>Pós-graduação em Direito Tributário</li>
-              <li>Pós-graduação em Direito Empresarial</li>
-              <li>Gestão Jurídica de Comércio Internacional</li>
-              <li>Marketing Digital Jurídico</li>
-            </ul>
+          <div class="bio-caption">
+            <strong>Felipe Cavalheiro Ojeda</strong>
+            <span>OAB/SP 357.192</span>
           </div>
         </div>
+
+        <!-- Coluna: texto + credenciais -->
+        <div class="bio-content">
+          <div class="sobre-copy">
+            <p>A Advocacia Ojeda foi fundada em 2014 com o propósito de oferecer assessoria jurídica de excelência para clientes que operam em ambientes de alta complexidade — onde o direito precisa acompanhar a velocidade dos negócios.</p>
+            <p>Felipe Ojeda combina formação clássica em Direito com especializações em áreas contemporâneas como Direito Digital, Tributário e Empresarial. Essa combinação permite uma atuação estratégica e preventiva, reduzindo litígios e protegendo o patrimônio dos clientes a longo prazo.</p>
+            <p>O escritório opera com infraestrutura moderna, processos ágeis e comunicação transparente — para que o cliente entenda cada etapa e possa tomar decisões com segurança.</p>
+          </div>
+          <div class="sobre-aside">
+            <div class="card">
+              <p class="card-label">Formação &amp; Especializações</p>
+              <ul>
+                <li>Direito — Universidade São Judas Tadeu</li>
+                <li>Pós-graduação em Direito Tributário</li>
+                <li>Pós-graduação em Direito Empresarial</li>
+                <li>Gestão Jurídica de Comércio Internacional</li>
+                <li>Marketing Digital Jurídico</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
