@@ -22,3 +22,7 @@
 .menu-toggle{border-color:#050b43}.menu-toggle span{background:#050b43}
 .portal-header{background:#fff;border-bottom:1px solid #dce1ec}.portal-header .portal-back{color:#050b43}
 @media(max-width:650px){.brand-logo{width:115px;max-height:55px}.main-nav{background:#fff;border-color:#dce1ec}.main-nav a{color:#303a58}.main-nav .nav-client{color:#050b43;border-color:#dce1ec}.menu-toggle{background:#fff}.hero:before{background:linear-gradient(130deg,#050b43,#101b5a)}}
+
+.site-footer{background:#050b43;color:#d4dcee}.site-footer>p{color:#b8c1d8}.footer-bottom{border-color:#ffffff33;color:#c7cee0}.footer-bottom a:hover{color:#fff}
+.founder-seal{border-color:#ffffff40;color:#d4dcee}.founder-seal b{color:#fff}
+.portal-privacy{color:#606981}.portal-footer{color:#606981}
