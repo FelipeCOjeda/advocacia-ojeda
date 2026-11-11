@@ -25,18 +25,17 @@ if (form) {
     if (!form.reportValidity()) return;
 
     const fields = new FormData(form);
-    const subject = `Contato pelo site - ${fields.get('subject')}`;
+    const subject = `Contato pelo site — ${fields.get('subject')}`;
     const body = [
       `Nome: ${fields.get('name')}`,
       `E-mail: ${fields.get('email')}`,
       `Assunto: ${fields.get('subject')}`,
       '',
       'Mensagem:',
-      fields.get('message') || '(n�o informada)',
+      fields.get('message') || '(não informada)',
     ].join('\n');
 
     window.location.href = `mailto:fojeda@adv.oabsp.org.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    if (feedback) feedback.textContent = 'Seu aplicativo de e-mail foi aberto. Revise e envie a mensagem por l�.';
+    if (feedback) feedback.textContent = 'Seu aplicativo de e-mail foi aberto. Revise e envie a mensagem por lá.';
   });
 }
-
