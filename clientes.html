@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#102820">
+  <meta name="theme-color" content="#050b43">
   <meta name="description" content="Área do cliente da Advocacia Ojeda. Acompanhamento jurídico com acesso individual e seguro.">
   <title>Área do cliente | Advocacia Ojeda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,9 @@
       <a class="button button-dark portal-contact" href="mailto:fojeda@adv.oabsp.org.br?subject=Atualiza%C3%A7%C3%A3o%20de%20processo%20-%20%C3%81rea%20do%20cliente&body=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20atualiza%C3%A7%C3%A3o%20sobre%20meu%20caso.%20Por%20seguran%C3%A7a%2C%20n%C3%A3o%20inclua%20dados%20sens%C3%ADveis%20neste%20primeiro%20contato.">Solicitar atualização <span aria-hidden="true">↗</span></a>
       <p class="portal-privacy">Não informe senha, CPF, número de processo ou documentos nesta página. O site público não coleta dados processuais.</p>
     </div>
+    <details class="portal-contact-mini"><summary>Precisa falar com o escritório?</summary>
+      <form class="contact-form" id="contact-form"><input type="hidden" name="subject" value="Contato pela área do cliente"><label>Seu nome<input name="name" autocomplete="name" required placeholder="Nome"></label><label>Seu e-mail<input name="email" type="email" autocomplete="email" required placeholder="voce@exemplo.com"></label><label>Mensagem<textarea name="message" rows="2" placeholder="Não inclua número de processo ou dados sensíveis."></textarea></label><button class="button" type="submit">Preparar e-mail <span aria-hidden="true">↗</span></button><p class="form-note">O botão abre seu aplicativo de e-mail. O site não envia nem armazena os dados.</p><p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p></form>
+    </details>
     <p class="portal-footer">Advocacia Ojeda <span>·</span> fojeda@adv.oabsp.org.br</p>
   </main>
 </body>
