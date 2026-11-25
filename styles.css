@@ -217,3 +217,22 @@
  .ebook-cover-frame{max-width:540px;margin:0 auto}
  .article-pagination{flex-direction:column;padding-bottom:40px}
 }
+
+/* Refinamentos de hierarquia tipografica — board Xsquad */
+:root{
+  --accent-dark:#a9793c;
+  --accent-light:#e3c78c
+}
+.hero .eyebrow{color:var(--accent-light)}
+.hero .eyebrow span{background:var(--accent-light)}
+.hero h1 em,.contact h2 em,.detail-process>h2 em{color:var(--accent-light)!important;font-weight:600!important}
+.section-heading h2 em,.detail-topics .section-heading h2 em,.blog-promo .section-heading h2 em,.contact-compact h2 em{color:var(--accent-dark)!important;font-weight:600!important}
+.hero h1,.intro h2,.contact h2,.section-heading h2,.card-main h3,.founder-quote blockquote,.founder-info h2,.steps h3,.client-band h2,.detail-hero h1,.detail-intro-grid h2,.detail-card-grid h3,.detail-process>h2,.contact-compact h2,.blog-hero h1,.blog-category-grid h2,.blog-cta h2,.blog-feature-marker b,.blog-feature-copy h2,.article-hero h1,.article-body h2,.article-body h3{font-weight:600!important}
+.hero-lead{color:#d6dcef;font-size:16px}
+.hero-signature small{color:#c4cce0}
+.eyebrow,.section-kicker{letter-spacing:.14em}
+.hero-bottom{font-size:10px}
+.card-main p{font-size:14px;color:#5c6580}
+.footer-bottom{font-size:10px}
+.contact-form label{font-size:11px}
+.contact-form input,.contact-form select,.contact-form textarea{font-size:13px}
