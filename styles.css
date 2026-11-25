@@ -5,7 +5,7 @@
 
 
 /* Identidade visual Advocacia Ojeda: azul-marinho, branco e neutros. */
-:root{--forest:#050b43;--forest-2:#101b5a;--mint:#f5f6fb;--paper:#fff;--cream:#f2f4f9;--white:#fff;--ink:#171d35;--muted:#606981;--line:#dce1ec;--gold:#142052}
+:root{--forest:#050b43;--forest-2:#101b5a;--mint:#f5f6fb;--paper:#fff;--cream:#f2f4f9;--white:#fff;--ink:#171d35;--muted:#5c6580;--line:#dce1ec;--gold:#a9793c}
 .brand-logo{display:block;width:158px;height:auto;max-height:76px;object-fit:contain}
 .brand-footer .brand-logo{filter:brightness(0) invert(1)}
 .hero:before{background:linear-gradient(118deg,#050b43 0%,#050b43 52%,#101b5a 100%)}
@@ -236,3 +236,9 @@
 .footer-bottom{font-size:10px}
 .contact-form label{font-size:11px}
 .contact-form input,.contact-form select,.contact-form textarea{font-size:13px}
+.signature-line{background:var(--accent-light)}
+.quote-rule{background:var(--gold)}
+.section-kicker span:first-child:not(:only-child){display:none}
+.practice-card>.card-number{display:none}
+.practice-list .practice-card{grid-template-columns:minmax(0,1fr)}
+a span[aria-hidden="true"]{display:none}
